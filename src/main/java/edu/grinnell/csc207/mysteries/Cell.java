@@ -20,7 +20,7 @@ public class Cell {
      * @param x the <code>int</code> to modify (?) 
      */
     public static void change1(int x) {
-        x = 5;
+        x = 5; // value
     }
 
     /**
@@ -28,7 +28,7 @@ public class Cell {
      * @param c the <code>Cell</code> to modify (?) 
      */
     public static void change2(Cell c) {
-        c.x = 5;
+        c.x = 5; // reference 
     }
 
     /**
@@ -42,6 +42,12 @@ public class Cell {
 
     public static void main(String[] args) {
         // Fill me in to test your hypotheses!
-        System.out.println("Hello World!");
+        Cell a = new Cell(3);
+        change1(a.x);
+        System.out.println(a.x);
+        change2(a);
+        System.out.println(a.x);
+        change3(a);
+        System.out.println(a.x);
     }
 }

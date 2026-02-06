@@ -16,21 +16,21 @@ public class Functions {
 		} else if (arr.length == 2) {
 			return Math.max(arr[0], arr[1]);
 		} else {
-			int g1 = Math.max(arr[0], Math.max(arr[1], arr[2]));
-			int g2 = Math.min(arr[0], Math.min(arr[1], arr[2]));
-			int g3 = Math.max(arr[0], Math.min(arr[1], arr[2]));
+			int g1 = Math.max(arr[0], Math.max(arr[1], arr[2])); // max of 3
+			int g2 = Math.min(arr[0], Math.min(arr[1], arr[2])); // min of 3 (treated as mid)
+			int g3 = Math.max(arr[0], Math.min(arr[1], arr[2])); // mid of 3 (treated as min)
 			for (int i = 3; i < arr.length; i++) {
-				if (arr[i] > g1) {
-					g3 = g2;
-					g2 = g1;
-					g1 = arr[i];
+				if (arr[i] > g1) { // if elt is greater than max
+					g3 = g2; // mid = min
+					g2 = g1; // min = max
+					g1 = arr[i]; // max = current (new max)
 				}
-				if (arr[i] > g2) {
-					g3 = g2;
-					g2 = arr[i];
+				if (arr[i] > g2) { // if elt is greater than min (!)
+					g3 = g2;  // mid = min
+					g2 = arr[i]; // min = new mid (?!)
 				}
-				if (arr[i] > g1) {
-					g1 = arr[i];
+				if (arr[i] > g1) { // if elt is greater than mid (!)
+					g1 = arr[i]; // max 
 				}
 			}
 			return g3;

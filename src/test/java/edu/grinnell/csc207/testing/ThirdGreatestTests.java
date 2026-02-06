@@ -13,6 +13,30 @@ public class ThirdGreatestTests {
 		int[] arr = { 3, 8, 4, 7, 2 };
 		assertEquals(4, Functions.thirdGreatest(arr));
 	}
+
+	@Test
+	public void allSortedUnitTest() {
+		int[] arr = { 2, 3, 4, 7, 8 };
+		assertEquals(4, Functions.thirdGreatest(arr));
+	}
+
+	@Test
+	public void oneEltUnitTest() {
+		int arr[] = { 1 };
+		assertEquals(1, Functions.thirdGreatest(arr));
+	}
+
+	@Test
+	public void twoEltsUnitTest() {
+		int arr[] = { 1, 2 };
+		assertEquals(1, Functions.thirdGreatest(arr));
+	}
+
+	@Test
+	public void threeEltsUnitTest() {
+		int[] arr = { 4, 7, 2 };
+		assertEquals(2, Functions.thirdGreatest(arr));
+	}
 	
 	// TODO: add additional unit tests here!
 	
