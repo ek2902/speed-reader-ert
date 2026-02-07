@@ -6,16 +6,61 @@ _(TODO: insert a description of the project here!)_
 
 ### Authors
 
-*   _(TODO: insert your names here!)_
-*  ...
+*  Eva Kapoor
+*  Robel Gebeyehu
+*  Thomas Bao
 
 ### Resources
 
-*   _(TODO: list your resources here!)_
-*   ...
 *   `DrawingPanel.java` adapted from _[Building Java Programs](https://www.buildingjavaprograms.com/) by Reges and Stepp.
+*  Aurora reading link  :(https://en.wikipedia.org/wiki/Aurora)
+*  Cacao reading link   :(https://en.wikipedia.org/wiki/Chocolate)
+*  Coffee reading link  :(https://en.wikipedia.org/wiki/Coffee)
+*  Fastfood reading link:(https://en.wikipedia.org/wiki/Fast_food)
+*  Sleep reading link   :(https://en.wikipedia.org/wiki/Sleep)
+*  Luge reading link    :(https://en.wikipedia.org/wiki/Luge)
+*  Compost reading link :(https://en.wikipedia.org/wiki/Compost)
+*  Bicycle reading link :(https://en.wikipedia.org/wiki/Bicycle)
+*  Sleep reading link   :()
+
 
 ## Write-up
+
+## Questions
+
+Aurora questions:
+1. What are the two common names for an aurora?
+2. What causes an aurora?
+3. What is the most commone color for an Aurora
+4. Where on Earth are the best places to see an aurora?
+
+
+Coffee questions:
+1. What are the two main types of coffee beans?
+2. What is the name of the stimulant found in coffee that makes people feel awake?
+3. What country is named as the biggest producer of coffee?
+4. According to the story, which animal first ate the coffee berries and became energetic?
+
+
+Cacao questions:
+1. What are the two main parts that chocolate liquor is separated into?
+2. What is the key ingredient that white chocolate does not have?
+3. Which ancient Central American civilizations are mentioned as drinking chocolate?
+
+
+sleep questions:
+1. What does the acronym "REM" stand for in REM sleep?
+2. What is the approximate length of one full sleep cycle?
+3. What does the text say your body's internal clock responds to, which tells it to be awake or to sleep?
+
+Optional:
+luge questions: 
+1. In what position does a person ride a luge sled?
+2. What is the main way a luger steers the sled?
+3. Which other sliding sport is mentioned as being confused with luge but is ridden head-first?
+
+
+
 
 ### Semantic Mysteries
 
@@ -33,13 +78,10 @@ change3: takes a Cell c as input and changes the value of x in that cell to 5, b
 Here, Java passes by reference.
 Despite setting c to a new Cell, this does not change the value of c.x to 0 outside of the function, but instead to 5.
 
-Passing an object with an arbitrary number of fields is not more costly than passing a primitive, since in both cases, we are fundamentally dealing with the same type. (?)
+Passing an object with an arbitrary number of fields is not more costly than passing a primitive, since in both cases, we are fundamentally dealing with the same type.
 
 
 #### Problem 1.2
-
-What is the this variable in a method, and where does it come from? How do these four classes differ with respect to their increment methods?
-What’s the rule for variable look-up in Java? How does this differ from function calls in C?
 
 The this keyword is used to refer to a field of an object within the constructors and methods of the class of that object. 
 
@@ -55,28 +97,37 @@ In Java, for two variables of the same name, Java assumes the variable being ref
 
 #### Problem 1.3
 
+A static member can be called anywhere in the class where it is defined. It is not attached to any one object.
+
+a. This code does not work because we are using the this keyword on a static value. We can fix this code by calling `value` without the this keyword. We should then also change the name of the parameter passed into increment to a clearer name.
+
+b. This code does not work because the printGreeting method is a non-static method that is not called through an object.
 
 
 #### Problem 1.4
 
-_(TODO: fill me in!)_
+When a new Counter is initialized, it is stored in a new address location. The `==` operator compares the addresses of the two object, and they will not be considered the same.
+
+When initializing a string for the first time, it is also stored in a new address location. However, when another string is stored, it will look for the same string contents in that area and connect the new string to the original string stored there. Thus, when the `==` operator compares the two addresses, they will be considered the same.
+
+When using nextLine, the input is saved at two different addresses, so the `==` operator will return false no matter what.
 
 #### Problem 2.1
 
 (always: ✓, sometimes: ?, never: ✗)
 
 *   Point A:
-    + `x1 == 0`:
-    + `x2 < 0`:
+    + `x1 == 0`: ?
+    + `x2 < 0`: ?
 *   Point B:
-    + `x1 == 0`:
-    + `x2 < 0`:
+    + `x1 == 0`: ?
+    + `x2 < 0`: ✗
 *   Point C:
-    + `y1 < 5`:
-    + `y2 > 0`:
+    + `y1 < 5`: ?
+    + `y2 > 0`: ?
 *   Point D:
-    + `z > y1`:
-    + `z < 0`:
+    + `z > y1`: ✗
+    + `z < 0`: ?
 
 #### Problem 2.2
 
@@ -84,12 +135,12 @@ _(TODO: fill me in!)_
 
 |         | `s.length >= 2` | `ret.length() > 0` | `ret.length() % 2 == 0`
 | ------- | --------------- | ------------------ | -----------------------
-| Point A |                 |                    |
-| Point B |                 |                    |
-| Point C |                 |                    |
-| Point D |                 |                    |
-| Point E |                 |                    |
+| Point A |        ?        |          ✗         |            ✓
+| Point B |        ✓        |          ✗         |            ✓
+| Point C |        ✓        |          ?         |            ✓
+| Point D |        ✓        |          ✓         |            ✓
+| Point E |        ✓        |          ✓         |            ✓
 
 ### Empirical Complexity Analysis
 
-_(TODO: fill me in!)_
+Comparing graphs, the operation counting method is more accurate for determining and measuring time complexity. The operation counting method shows distinctions between programs with different time complexities more clearly than the wall-clock method.

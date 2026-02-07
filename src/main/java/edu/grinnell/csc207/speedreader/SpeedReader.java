@@ -3,11 +3,18 @@ package edu.grinnell.csc207.speedreader;
 import java.awt.*;
 import java.io.IOException;
 
-/** TODO: implement this class and add a doc comment! */
+/** 
+ * A speed reading app using RSVP
+ *  Displays words from a text file one at a time at the set user speed
+*/
 public class SpeedReader {
-    /** TODO: implement me and add an appropriate doc comment! 
-     * @throws IOException
-     * @throws InterruptedException */
+    /** 
+     * Main method to run the speed reader.
+     * Usage: SpeedReader <filename> <width> <height> <font size> <wpm>
+     * @param args command line arguments
+     * @throws IOException if thread is sleep in interrupted 
+     * @throws InterruptedException if file cant be read
+     * */
     public static void main(String[] args) throws InterruptedException, IOException {
         if (args.length != 5) {
             System.out.println("Usage: Usage: SpeedReader <filename> <width> <height> <font size> <wpm>");
@@ -31,9 +38,8 @@ public class SpeedReader {
         while (gen.hasNext()) {
             panel.clear();
             String word = gen.next();
-            panel.sleep(sleepTime / 2);
             g.drawString(word, 100, 100);
-            panel.sleep(sleepTime / 2);
+            panel.sleep(sleepTime);
         }
         
         System.out.println("Total number of words: " + gen.getWordCount());

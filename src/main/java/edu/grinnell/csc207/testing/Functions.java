@@ -36,4 +36,16 @@ public class Functions {
 			return g3;
 		}
 	}
+
+	public static int sum(int n) {
+		int sum = 0;
+		if(n < 0) {
+			throw new IllegalArgumentException();
+		}
+		for (int i = 0; i <= n; i++) {
+			sum += i;
+		}
+		
+		return sum;
+	}
 }

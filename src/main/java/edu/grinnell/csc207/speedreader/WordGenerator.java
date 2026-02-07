@@ -4,25 +4,37 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
 
-/** TODO: implement this class and add a doc comment! */
+/**
+ * A class that generates words from a text file and counts stats.
+*/
 public class WordGenerator {
     private Scanner text;
     private int wordCount;
     private int sentenceCount;
 
-    /** TODO: implement me and add an appropriate doc comment! */
+    /**
+     * Makes a WordGenerator for the given file.
+     * @param filename the name of the file to read
+     * @throws IOException if the file cannot be opened
+    */
     public WordGenerator(String filename) throws IOException {
         this.text = new Scanner(new File(filename));
         this.wordCount = 0;
         this.sentenceCount = 0;
     }
 
-    /** TODO: implement me and add an appropriate doc comment! */
+    /**
+     * Checks if there are more words to read.
+     * @return true if ther are more wrods,otherwise false
+     */
     public boolean hasNext() {
         return this.text.hasNext();
     }
 
-    /** TODO: implement me and add an appropriate doc comment! */
+    /** 
+     * Returns the next word and updates counts.
+     * @return the next word from the file
+    */
     public String next() {
         String nxt = this.text.next();
         if (nxt.endsWith("?") || nxt.endsWith(".") || nxt.endsWith("!")) {
@@ -32,12 +44,18 @@ public class WordGenerator {
         return nxt;
     }
 
-    /** TODO: implement me and add an appropriate doc comment! */
+    /**
+     * Gets the total number of words read so far.
+     * @return the word count
+     */
     public int getWordCount() {
         return this.wordCount;
     }
 
-    /** TODO: implement me and add an appropriate doc comment! */
+    /** 
+     * Gets the total number of words read so far.
+     * @return the word count
+     */
     public int getSentenceCount() {
         return this.sentenceCount;
     }
