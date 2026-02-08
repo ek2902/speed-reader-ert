@@ -2,7 +2,12 @@
 
 ## About
 
-_(TODO: insert a description of the project here!)_ 
+This project consists of a speed reader program that implements Rapid Serial Visual Presentation (RSVP) to facilitate speed reading. 
+The program takes arguments of a file name, panel width, panel height, font size, and words per minute (WPM) from the command line to display a window of the given height and width with each word in the given file being displayed in the Courier font at the given font size at the given WPM. 
+  Usage: SpeedReader <filename> <width> <height> <font size> <wpm>
+In the case that these arguments are not provided, the program exits with a usage message. There is no error checking for individual arguments.
+
+We used several texts from online sources like Wikipedia as testing material for our program, links to which can be found in the 'Resources' section. We also tested our program on three users with varying speed reading experience.
 
 ### Authors
 
@@ -21,18 +26,24 @@ _(TODO: insert a description of the project here!)_
 *  Luge reading link    :(https://en.wikipedia.org/wiki/Luge)
 *  Compost reading link :(https://en.wikipedia.org/wiki/Compost)
 *  Bicycle reading link :(https://en.wikipedia.org/wiki/Bicycle)
-*  Sleep reading link   :()
-
 
 ## Write-up
 
 ## Questions
 
+Haoson Liu @liuhonf@grinnell.edu
+Jefferson Valladares: valladar2@grinnell.edu
+Brynna Schwab: schwabbr@grinnell.edu
+
 Aurora questions:
-1. What are the two common names for an aurora?
-2. What causes an aurora?
-3. What is the most commone color for an Aurora
+1. What are the two common names for an aurora? 
+2. What causes an aurora? 
+3. What is the most commone color for an Aurora? 
 4. Where on Earth are the best places to see an aurora?
+
+Hanson (500 WPM): 1,half 2,correct 3,correct 4,correct
+Jefferson (No speedreader): 1,correct 2,correct 3,correct 4,correct 
+Brynna (350 WPM): 1,correct 2,correct 3,half 4,correct 
 
 
 Coffee questions:
@@ -41,26 +52,31 @@ Coffee questions:
 3. What country is named as the biggest producer of coffee?
 4. According to the story, which animal first ate the coffee berries and became energetic?
 
+Hanson (250 WPM): 1,nun 2,correct 3,correct 4,correct
+Jefferson (500 WPM): 1,half 2,correct 3,correct 4,correct 
+Brynna (500 WPM): 1,correct 2,correct 3,half 4,correct 
+
 
 Cacao questions:
-1. What are the two main parts that chocolate liquor is separated into?
-2. What is the key ingredient that white chocolate does not have?
-3. Which ancient Central American civilizations are mentioned as drinking chocolate?
+1. What are the two main parts that chocolate liquor is separated into? 
+2. What is the key ingredient that white chocolate does not have?  
+3. Which ancient Central American civilizations are mentioned as drinking chocolate?  
+
+Hanson (350 WPM): 1,half 2,nun 3,correct
+Jefferson (250 WPM): 1,half 2,correct 3,correct  
+Brynna (No speed reader): 1,correct 2,correct 3,correct
 
 
-sleep questions:
+Sleep questions:
 1. What does the acronym "REM" stand for in REM sleep?
 2. What is the approximate length of one full sleep cycle?
-3. What does the text say your body's internal clock responds to, which tells it to be awake or to sleep?
+3. What does the body's internal clock responds to, which tells it to be awake or to sleep?
 
-Optional:
-luge questions: 
-1. In what position does a person ride a luge sled?
-2. What is the main way a luger steers the sled?
-3. Which other sliding sport is mentioned as being confused with luge but is ridden head-first?
+Hanson (No speed reader): 1,correct 2,correct 3,correct 
+Jefferson (350 WPM): 1,half 2,correct 3,correct 
+Brynna (250 WPM): 1,correct 2,half 3,correct 
 
-
-
+CONCLUSION: All of our participants demonstrated that they were able to comprehend what they were reading with the speed reader, even at higher speeds.
 
 ### Semantic Mysteries
 

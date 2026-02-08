@@ -17,7 +17,7 @@ public class SpeedReader {
      * */
     public static void main(String[] args) throws InterruptedException, IOException {
         if (args.length != 5) {
-            System.out.println("Usage: Usage: SpeedReader <filename> <width> <height> <font size> <wpm>");
+            System.out.println("Usage: SpeedReader <filename> <width> <height> <font size> <wpm>");
             System.exit(1);
         }
 
